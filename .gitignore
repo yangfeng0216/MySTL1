@@ -1,0 +1,6 @@
+# 目录
+cmake-build-debug/
+cmake-build-debug-mingw/
+.idea/
+
+# 文件

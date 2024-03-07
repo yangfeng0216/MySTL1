@@ -1,0 +1,5 @@
+FILE(GLOB source_file CONFIGURE_DEPENDS ./*.cpp)
+FILE(GLOB source_head_file CONFIGURE_DEPENDS ./*.h)
+add_library(ass_container ${source_file} ${source_head_file})
+target_include_directories(ass_container PUBLIC .)
+target_link_libraries(ass_container PRIVATE utils iterator function)

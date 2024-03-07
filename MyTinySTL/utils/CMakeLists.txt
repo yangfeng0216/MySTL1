@@ -1,0 +1,5 @@
+FILE(GLOB source_file CONFIGURE_DEPENDS ./*.cpp )
+FILE(GLOB source_head_file CONFIGURE_DEPENDS ./*.h)
+add_library(utils ${source_file} ${source_head_file})
+target_include_directories(utils PUBLIC .)
+target_link_libraries(utils PRIVATE algorithm allocator iterator)

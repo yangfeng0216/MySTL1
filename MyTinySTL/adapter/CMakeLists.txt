@@ -1,0 +1,5 @@
+FILE(GLOB source_file CONFIGURE_DEPENDS ./*.cpp)
+FILE(GLOB source_head_file CONFIGURE_DEPENDS ./*.h)
+add_library(adapter ${source_file} ${source_head_file})
+target_include_directories(adapter PUBLIC .)
+target_link_libraries(adapter PRIVATE utils iterator function seq_container)
